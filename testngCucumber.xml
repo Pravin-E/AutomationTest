@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel = "tests">
+	<!-- <parameter name = "URL" value = ""/> -->
+	<listeners>
+		<listener class-name = "Listeners"/>
+	</listeners>
+	
+	<test name="Validate Login">
+		<classes>
+			<class name="CucumberOptions.TestRunner" />
+		</classes>
+	</test> 
+
+<!--  UE2EFramework\src\test\java\CucumberOptions\TestRunner.java-->
+	
+	
+</suite> <!-- Suite -->

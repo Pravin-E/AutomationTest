@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="Maven.UE2EFramework.Listeners"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Validate CourseTitle(failed)" parallel="tests">
+    <classes>
+      <class name="Maven.UE2EFramework.Validatecoursetitle">
+        <methods>
+          <include name="validateTitle" invocation-numbers="0"/>
+          <include name="initialize"/>
+          <include name="terminate"/>
+        </methods>
+      </class> <!-- Maven.UE2EFramework.Validatecoursetitle -->
+    </classes>
+  </test> <!-- Validate CourseTitle(failed) -->
+</suite> <!-- Failed suite [Suite] -->
