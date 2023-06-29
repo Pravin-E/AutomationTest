@@ -1,0 +1,33 @@
+
+<Configuration status="WARN">
+
+	<Properties>
+		<Property name="basePath">./Logs</Property>
+	</Properties>
+
+
+
+	<Appenders>
+		<RollingFile name="File" fileName="${basePath}/Output.log"
+			filePattern="${basePath}/Output.log-%d{yyyy-MM-dd}.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<SizeBasedTriggeringPolicy size="5000" />
+		</RollingFile>
+
+
+
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+
+			<!-- <Logger name="Maven.MavenDataDriven.log4" level="error" additivity="false"> 
+				<AppenderRef ref="File"/> </Logger> -->
+
+			<Root level="trace">
+				<AppenderRef ref="File" />
+			</Root>
+		</Loggers>
+</Configuration>
